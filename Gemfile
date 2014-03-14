@@ -6,7 +6,15 @@ gem 'rails', '4.0.3'
 # Use jdbcsqlite3 as the database for Active Record
 gem 'activerecord-jdbcsqlite3-adapter'
 
-gem 'activerecord-jdbc-adapter', '~> 1.3.2'
+platforms :jruby do
+	gem 'activerecord-jdbc-adapter', '~> 1.3.2'
+	gem 'activerecord-jdbcmysql-adapter'
+end
+
+platforms :ruby do
+	#Database
+	gem 'mysql2', platform: :ruby
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -29,13 +37,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-#Database
-gem 'mysql2'
-gem 'activerecord-jdbcmysql-adapter'
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  #gem 'sdoc', require: false
+  gem 'sdoc', require: false
 end
 
 # Use ActiveModel has_secure_password
