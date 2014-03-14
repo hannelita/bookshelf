@@ -6,7 +6,7 @@ gem 'rails', '4.0.3'
 # Use jdbcsqlite3 as the database for Active Record
 gem 'activerecord-jdbcsqlite3-adapter'
 
-gem 'activerecord-jdbc-adapter', '~> 1.3.2', platform: :jruby
+gem 'activerecord-jdbc-adapter', '~> 1.3.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 1.2'
 
 #Database
 gem 'mysql2', platform: :ruby
-gem 'activerecord-jdbcmysql-adapter', platform: :jruby
+gem 'activerecord-jdbcmysql-adapter'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
