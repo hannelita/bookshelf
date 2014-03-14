@@ -30,7 +30,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 #Database
-gem 'mysql2', platform: :ruby
+gem 'mysql2'
 gem 'activerecord-jdbcmysql-adapter'
 
 group :doc do
